@@ -10,8 +10,8 @@
 //     </div>
 //   );
 // }
-
-import React, { useCallback,useMemo, useState } from 'react';
+'use client';
+import React, { useCallback, useMemo, useState } from 'react';
 
 function ParentComponent() {
   const [count, setCount] = useState(0);
