@@ -1,31 +1,17 @@
-// // app/test/page.tsx
-// import CounterWithRef from '@/lib/CounterWithRef';
-// import CounterWithState from '@/lib/CounterWithState';
-
-// export default function TestPage() {
-//   return (
-//     <div className="p-6 space-y-6">
-//       <CounterWithState />
-//       <CounterWithRef />
-//     </div>
-//   );
-// }
 'use client';
 import React, { useCallback, useMemo, useState } from 'react';
 
 function ParentComponent() {
   const [count, setCount] = useState(0);
 
-  // useMemo: chỉ tính lại khi count thay đổi
   const doubledCount = useMemo(() => {
     console.log('Calculating doubled count...');
     return count * 2;
-  }, [count]); // Chỉ tính lại khi count thay đổi
+  }, [count]);
 
-  // useCallback: chỉ tạo lại hàm khi count thay đổi
   const handleClick = useCallback(() => {
     console.log('Button clicked');
-  }, []); // Không có dependency, hàm không thay đổi (trừ khi component unmount)
+  }, []);
 
   return (
     <>
