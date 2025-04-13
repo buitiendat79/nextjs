@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+import { RiAlarmWarningLine } from 'react-icons/ri';
 
 import TextButton from '@/components/buttons/TextButton';
 
@@ -21,7 +21,7 @@ export default function Error({
     <main>
       <section className='bg-white'>
         <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
-          <RiAlarmWarningFill
+          <RiAlarmWarningLine
             size={60}
             className='drop-shadow-glow animate-flicker text-red-500'
           />
